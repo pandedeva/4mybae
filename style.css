@@ -71,7 +71,7 @@ body {
   height: 70px;
   width: 70px;
   margin: 20px 0;
-  margin-top: -200px;
+  margin-top: 20px;
   background: rgb(255, 255, 255);
   display: flex;
   align-items: center;
@@ -200,7 +200,6 @@ span {
   -moz-border-radius: 20px !important;
   -ms-border-radius: 20px !important;
   -o-border-radius: 20px !important;
-  margin-bottom: 150px;
 }
 
 .swal2-title {
