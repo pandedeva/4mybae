@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.4/dist/sweetalert2.all.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Happy Valentine Day💖</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body id="body">
+    <div class="preload"><p>Loading . . .</p></div>
+    <div class="open">
+      <div>
+        <div class="lope" onclick="ilang()"><i class="love material-icons-sharp"> favorite </i></div>
+        <h3>Click The Love!</h3>
+      </div>
+    </div>
+    <div id="bg"></div>
+    <img src="" alt="" id="fotoku" />
+
+    <h2 id="hai">Hey Lol</h2>
+    <h3 id="hia">Scroll left please.</h3>
+
+    <div id="slider">
+      <p>Baeeeeeee</p>
+      <p>I have something for you</p>
+
+      <p>Click the gift!<span>🎁</span></p>
+    </div>
+  </body>
+  <script>
+    musik = "";
+    foto = "img/PP.jpg";
+    background = "img/bgfix1.jpg";
+    noWhatsapp = `+62881037954608`;
+
+    async function popUp() {
+      await swalo.fire({
+        title: `Baee, Happy Valentine's Day Indahhh myyy preciouss lilll gurllll 💖`,
+        imageUrl: "img/profile.jpg",
+      });
+      kirimPesan();
+
+      await swalo.fire({
+        title: `I’m so blessed to have you in my life Indah and and I’m forever grateful for the sunshine you’ve shone in my darkest moments.`,
+        imageUrl: "img/img2.JPEG",
+      });
+      kirimPesan();
+
+      await swalo.fire({
+        title: `
+        You deserve all the love & everything beautiful in this world. Everyday i pray dat you get & achieve everything you want. Thank you for being the reason of my smile.
+        I'll choose you over and over again in all circumstances.
+        `,
+        imageUrl: "img/kiss.JPG",
+      });
+      kirimPesan();
+
+      await swalo.fire({
+        title: `
+        Once again, Happy valentine, Bae. I love Indahh, you mean the world to me.
+        I love you more than all the stars in the sky.
+        `,
+        imageUrl: "img/imgfix.JPG",
+      });
+      kirimPesan();
+
+      await swalo.fire({
+        title: `
+        i know dis shit was ass, cuz i make dis just for a day:(
+        sebenernya banyaakkk yangg harus dibenerinn:(((
+        but fuck it. I still love you tho <3
+        `,
+        imageUrl: "",
+      });
+      kirimPesan();
+
+      await swalo.fire({ title: "aaaaaaaaa kiyowoooooo😳🥰", imageUrl: "img/bae.jpg" });
+      kirimPesan();
+
+      await swalo.fire({ title: `NIII DOU MODE SENYAP lmfao`, imageUrl: "img/duo.JPG" });
+      kirimPesan();
+
+      await swalo.fire({ title: `dahh ahh, i loveee uuuuu indahh`, imageUrl: "img/PIC.JPG" });
+      kirimPesan();
+
+      await swalo.fire({ title: `...`, imageUrl: "img/last.JPEG" });
+      kirimPesan();
+    }
+    $(window).on("load", function () {
+      $(".preload").fadeOut("slow");
+    });
+    var audio = new Audio(musik);
+    audio.autoplay = true;
+    audio.loop = true;
+    bg.style = 'background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("' + background + '");';
+    fotoku.src = foto;
+    popupku();
+    var swalo = Swal.mixin({ allowOutsideClick: false });
+    async function kirimPesan() {
+      var { value: pesan } = await swalo.fire({ title: "Text me, rn. ASAP!", input: "text", confirmButtonText: "Send" });
+      if (pesan) {
+        await swalo.fire("Send on whatsapp okay");
+        location.assign("https://api.whatsapp.com/send?phone=" + noWhatsapp + "&text=" + pesan);
+      } else {
+        await swalo.fire({ confirmButtonText: "Okay daddy:(", title: "Gaa boleh dikosonginn :(" });
+        kirimPesan();
+      }
+    }
+    document.querySelector("span").addEventListener("click", function () {
+      popUp();
+    });
+    var open = document.querySelector(".open");
+    function ilang() {
+      audio.play();
+      open.style = "transition: 1.5s ease-out all; opacity: 0; transform: scale(100) translateY(-20px); filter: brightness(0);";
+      setTimeout(function () {
+        open.style = "display:none;";
+      }, 1500);
+      setTimeout(function () {
+        fotoku.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px) scale(1);";
+      }, 500);
+      setTimeout(function () {
+        hai.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px);";
+      }, 1400);
+      setTimeout(function () {
+        hia.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px);";
+      }, 1800);
+      setTimeout(function () {
+        slider.style = "opacity: 1; transition: 1s all ease; transform: translateY(0px) scale(1);";
+      }, 2200);
+    }
+  </script>
+</html>
